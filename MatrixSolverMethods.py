@@ -18,7 +18,7 @@ def Residue(A, B, x):
 #  Solves for x in Ax=B via the Jacobi method
 def Matrix_Solve_Jacobi(A, B, tol):
     Max_Iter = 1000
-    iterations = 1
+    iterations = 0
     L = np.tril(A, -1)
     U = np.triu(A, 1)
     D = np.diagflat(np.diag(A))
