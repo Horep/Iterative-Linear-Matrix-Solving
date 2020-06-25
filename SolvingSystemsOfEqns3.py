@@ -2,7 +2,7 @@ import numpy as np
 from DiagonalDominate import (ConvergencePotential,
                               SimpleDiagonalDominator,
                               DiagonalAbsSum)
-from MatrixSolverMethods import Matrix_Solve_Jacobi
+from MatrixSolverMethods import Matrix_Solve_Jacobi, Matrix_Solve_Gauss_Seidel
 
 m_list = [
           [86, 8, 17, 3, 2],
@@ -27,3 +27,4 @@ B = np.array(m_list)
 
 A, B = SimpleDiagonalDominator(A, B)
 X = Matrix_Solve_Jacobi(A, B, 10**-5)
+Y = Matrix_Solve_Gauss_Seidel(A, B, 10**-5)
