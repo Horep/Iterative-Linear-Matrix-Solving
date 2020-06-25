@@ -27,7 +27,7 @@ def Matrix_Solve_Jacobi(A, B, tol):
     q = D_inv.dot(B)
 
     if dd(A) is True:
-        print("Matrix A' diagonals dominate, convergence guaranteed.")
+        print("Matrix A's diagonals dominate, convergence guaranteed.")
     else:
         eigenvalues = np.linalg.eig(P)[0]
         SpecRad = np.amax(abs(eigenvalues))
@@ -66,7 +66,7 @@ def Matrix_Solve_Gauss_Seidel(A, B, tol):
     q = LD_inv.dot(B)
 
     if dd(A) is True:
-        print("Matrix A' diagonals dominate, convergence guaranteed.")
+        print("Matrix A's diagonals dominate, convergence guaranteed.")
     else:
         eigenvalues = np.linalg.eig(P)[0]
         SpecRad = np.amax(abs(eigenvalues))
